@@ -431,7 +431,7 @@ plt.xlabel(r'$V_{az}$ (km/s)', fontsize=14)
 plt.ylabel(r'$V_{\Delta E}$ (km/s)', fontsize=14)
 plt.colorbar()
 
-plt.savefig('kelupaan.png')
+plt.savefig('vaz.png')
 plt.show()
 
 plt.figure(dpi=200, figsize=(12,12))
