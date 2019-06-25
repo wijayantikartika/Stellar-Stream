@@ -407,22 +407,17 @@ df['U_err'] = dispersi_u
 df['V_err'] = dispersi_v
 df['W_err'] = dispersi_w
 
-#export_thin = df[mask_thin].to_csv (r'D:\kuliah\TA\data\thinbaru.csv', 
-#                index = None, header=True)
-#export_thick = df[(tdd > 2)&(df['[Fe/H]'] > -1.6)&(df['[Fe/H]'] <-0.2)].to_csv ('thickbarunyobalagi.csv', 
-#                 index = None, header=True)
-#export_halo = df[mask_halo].to_csv ('halobarulagi.csv', 
-#                index = None, header=True)
-export_halo1 = df[(tdh< 0.01) & (df['[Fe/H]'] < 1)].to_csv ('halo1barulagi.csv', 
+export_thin = df[mask_thin].to_csv ('thinbaru.csv', index = None, header=True)
+export_thick = df[(tdd > 2)&(df['[Fe/H]'] > -1.6)&(df['[Fe/H]'] <-0.2)].to_csv ('thick.csv', 
                  index = None, header=True)
+export_halo = df[mask_halo].to_csv ('halo.csv', index = None, header=True)
+export_halo1 = df[(tdh< 0.01) & (df['[Fe/H]'] < 1)].to_csv ('halo1.csv', index = None, header=True)
 
-#df2 = df[(vefi < -40) & (df['[Fe/H]'] > -1.4) & (H > D) & (H > TD) & (sby > 
-#         (90/sbx) + popt[1])]
+df2 = df[(vefi < -40) & (df['[Fe/H]'] > -1.4) & (H > D) & (H > TD) & (sby > 
+         (90/sbx) + popt[1])]
 
-#export_haloin = df2.to_csv (r'D:\kuliah\TA\data\halohalobandungbaru.csv', 
-#                            index = None, header=True)
-#export_semua = df.to_csv (r'D:\kuliah\TA\data\semua.csv', index = None, 
-#                          header=True)
+export_haloin = df2.to_csv ('haloin.csv', index = None, header=True)
+export_semua = df.to_csv ('semua.csv', index = None, header=True)
 '''
 fig, ax = plt.subplots(1, 3, dpi=200, figsize=(30,10))
 
